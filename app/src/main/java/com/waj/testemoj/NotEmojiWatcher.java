@@ -29,7 +29,7 @@ public class NotEmojiWatcher implements TextWatcher {
 	@Override
 	public void onTextChanged(CharSequence s, int start, int before, int count) {
 		if (!resetText) {
-			/*if (count >= 2) {*/// 表情符号的字符长度最小为2
+			if (count >= 2) {// 表情符号的字符长度最小为2
 				// 提取输入的长度大于3的文本
 				if (s.length() >= cursorPos + count && cursorPos>=0) {
 					CharSequence input = s.subSequence(cursorPos, cursorPos
@@ -46,7 +46,7 @@ public class NotEmojiWatcher implements TextWatcher {
 						Toast.makeText(context,"不支持的字符",Toast.LENGTH_SHORT).show();
 					}
 				}
-//			}
+			}
 		} else {
 			resetText = false;
 		}
